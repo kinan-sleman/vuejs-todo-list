@@ -1,8 +1,14 @@
 <template>
   <div class="container">
     <h1>Todo List</h1>
-    <h1>Completed: {{ todoCompleted }}</h1>
-    <h1>Pending: {{ todoPending }}</h1>
+    <div>
+      <div>Completed:</div>
+      <div> {{ todoCompleted }}</div>
+    </div>
+    <div>
+      <div>Pending:</div>
+      <div> {{ todoPending }}</div>
+    </div>
     <TodoList/>
     <TodoForm />
   </div>
@@ -45,7 +51,6 @@ export default {
 
 .container {
   max-width: 500px;
-  min-width: 500px;
   margin: auto;
   background-color: #09a3df;
   padding: 20px;
@@ -55,5 +60,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container>div:nth-child(2),
+.container>div:nth-child(3) {
+  display:flex;
+  min-width: 250px;
+  justify-content: space-between;
 }
 </style>
