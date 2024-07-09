@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import store from './store'
+// يتم استخدام الـ Store ضمن الـ app من خلال الـ use على الشكل التالي :
+createApp(App).use(store).mount('#app')
